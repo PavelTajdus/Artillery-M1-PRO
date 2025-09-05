@@ -33,7 +33,7 @@ M140 S[bed_temperature_initial_layer_single]; ; nastavit teplotu podložky pro 1
 M106 P1 S255 ; PTC ventilátor na 100 %
 M106 P2 S60 ; ventilátor komory ~24 %
 G4 P5000 ; pauza 5 s pro ustálení proudění
-M191 S47; ; čekat na ohřev komory na 47 °C
+M141 S{chamber_temperature[0]}; ; nastavit teplotu komory dle profilu (nečekat)
 M141 S0; ; vypnout vyhřívání komory (pokud bylo aktivní)
 {endif} ; konec podmínky ABS
 
@@ -41,7 +41,7 @@ M141 S0; ; vypnout vyhřívání komory (pokud bylo aktivní)
 M106 P1 S255 ; PTC ventilátor na 100 %
 M106 P2 S60 ; ventilátor komory ~24 %
 G4 P5000 ; pauza 5 s
-M191 S47; ; čekat na ohřev komory na 47 °C
+M141 S{chamber_temperature[0]}; ; nastavit teplotu komory dle profilu (nečekat)
 M141 S{chamber_temperature[0]}; ; nastavit cílovou teplotu komory dle profilu
 {endif} ; konec podmínky PC
 
@@ -49,7 +49,7 @@ M141 S{chamber_temperature[0]}; ; nastavit cílovou teplotu komory dle profilu
 M106 P1 S255 ; PTC ventilátor na 100 %
 M106 P2 S60 ; ventilátor komory ~24 %
 G4 P5000 ; pauza 5 s
-M191 S47; ; čekat na ohřev komory na 47 °C
+M141 S{chamber_temperature[0]}; ; nastavit teplotu komory dle profilu (nečekat)
 M141 S{chamber_temperature[0]}; ; nastavit cílovou teplotu komory dle profilu
 {endif} ; konec podmínky ASA
 
@@ -57,7 +57,7 @@ M141 S{chamber_temperature[0]}; ; nastavit cílovou teplotu komory dle profilu
 M106 P1 S255 ; PTC ventilátor na 100 %
 M106 P2 S60 ; ventilátor komory ~24 %
 G4 P5000 ; pauza 5 s
-M191 S47; ; čekat na ohřev komory na 47 °C
+M141 S{chamber_temperature[0]}; ; nastavit teplotu komory dle profilu (nečekat)
 M141 S{chamber_temperature[0]}; ; nastavit cílovou teplotu komory dle profilu
 {endif} ; konec podmínky PA
 
@@ -65,7 +65,7 @@ M141 S{chamber_temperature[0]}; ; nastavit cílovou teplotu komory dle profilu
 M106 P1 S255 ; PTC ventilátor na 100 %
 M106 P2 S60 ; ventilátor komory ~24 %
 G4 P5000 ; pauza 5 s
-M191 S47; ; čekat na ohřev komory na 47 °C
+M141 S{chamber_temperature[0]}; ; nastavit teplotu komory dle profilu (nečekat)
 M141 S{chamber_temperature[0]}; ; nastavit cílovou teplotu komory dle profilu
 {endif} ; konec podmínky PA-CF
 
